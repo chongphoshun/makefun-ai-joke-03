@@ -15,6 +15,11 @@ JOKE = (
 
 OUTPUT_DIR = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
 
-out = Path(OUTPUT_DIR) / "entry.txt"
-out.parent.mkdir(parents=True, exist_ok=True)
-out.write_text(JOKE, encoding="utf-8")
+def main() -> None:
+    out = Path(OUTPUT_DIR) / "entry.txt"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(JOKE, encoding="utf-8")
+
+
+if __name__ == "__main__":
+    main()
